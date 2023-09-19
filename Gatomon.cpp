@@ -1,7 +1,7 @@
 #include "Gatomon.h"
 
 Gatomon::Gatomon(const string& name, const string& element, int happiness, int hunger, 
-		int catClawSharpness) : Digimon(name, element, happiness, hunger), 
+		int catClawSharpness) : Digimon(name, happiness, hunger, element), 
 	        catClawSharpness(catClawSharpness) {}
 
 void Gatomon::useCatClawAttack() {
@@ -9,6 +9,6 @@ void Gatomon::useCatClawAttack() {
 }
 
 int Gatomon::getCatClawSharpness() const {
-	return catClawSharpness();
+	return catClawSharpness;
 }
 
